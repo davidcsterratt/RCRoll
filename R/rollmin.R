@@ -10,11 +10,11 @@
 ##' @param ... Further arguments passed to methods.
 ##' @return An object of the same class as ‘x’ with the rolling min.
 ##' @author David C Sterratt
-##' @useDynLib Croll
+##' @useDynLib RCRoll
 ##' @export
 rollmin <- function (x, k, fill = if (na.pad) NA, align = c("center",
     "left", "right"), ...)
 {
-  out <- .Call("C_rollmin", as.double(x), as.integer(k), PACKAGE="Croll")
+  out <- .Call("C_rollmin", as.double(x), as.integer(k), PACKAGE="RCRoll")
   return(out)
 }
